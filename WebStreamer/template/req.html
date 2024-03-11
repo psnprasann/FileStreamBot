@@ -175,19 +175,19 @@
 	<div>
 		<script>
     const currentUrl = window.location.href;
-const bisallink = currentUrl.replace("/watch/", "/dl/");
+    const finalUrl = currentUrl.replace("/watch/", "/dl/");
 
-function vlc_player() {
-    const openbisallink = bisallink;
-    const openVlc = `vlc://${openbisallink}`;
-    window.location.href = openVlc;
-}
+    function playOnline() {
+        const finalLinkUrl = finalUrl;
+        const vlcUrl = `vlc://${finalLinkUrl}`;
+        window.location.href = vlcUrl;
+    }
 
-function mx_player() {
-    const openbisallink = bisallink;
-    const openMx = `intent:${openbisallink}#Intent;package=com.mxtech.videoplayer.ad;end`;
-    window.location.href = openMx;
-}
+    function playOnlineMx() {
+        const finalLinkUrl = finalUrl;
+        const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;end`;
+        window.location.href = mxUrl;
+    }
     
     function playOnlinesp() {
         const finalLinkUrl = finalUrl;
