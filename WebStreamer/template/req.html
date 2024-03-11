@@ -180,13 +180,13 @@
     function playOnlineVlc() {
         const finalLinkUrl = finalUrl;
         const vlcUrl = `vlc://${finalLinkUrl}`;
-        window.location.href = vlcUrl;
+        window.location.href = openVlc;
     }
 
     function playOnlineMx() {
         const finalLinkUrl = finalUrl;
         const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;end`;
-        window.location.href = mxUrl;
+        window.location.href = openMx;
     }
     
     function playOnlinesp() {
