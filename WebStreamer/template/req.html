@@ -184,8 +184,9 @@
     }
 
     function playOnlineMx() {
-        const finalLinkUrl = finalUrl;
-        const mxUrl = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;end`;
+        const currentUrl = window.location.href;
+    const finalUrl = currentUrl.replace("/watch/", "/dl/");
+        const mxUrl = `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.ad;end`;
         window.location.href = mxUrl;
     }
     
