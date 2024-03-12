@@ -133,13 +133,6 @@
             <button id="mx-btn" onclick="playOnlineMx()"><img src="https://i.ibb.co/djV3Fn8/mxlogo.png" alt="mx_logo" width="120px">
             </button>
         </div>
-	</div>
-	<div style="margin-bottom: 5px; margin-top: 10px"></div>
-        <div id="button-container2">
-            <button id="dl-btn" onclick="download()">
-                <i class="fas fa-download"></i> Download Now
-            </button>
-        </div>
 </div>
 	
                   
@@ -165,17 +158,9 @@
     const currentUrl = window.location.href;
     const finalUrl = currentUrl.replace("/watch/", "/dl/");
 
-    <center>
-        <button style="font-size: 20px; background-color: skyblue; border-radius: 10px;" onclick="window.location.href = 'intent:{finalUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={file_data.file_name};end'">MX player</button> &nbsp
-        <button style="font-size: 20px; background-color: orange; border-radius: 10px;" onclick="window.location.href = 'vlc://{finalUrl}'">VLC player</button> &nbsp <br>
-        <p>&nbsp</p>
-        <button style="font-size: 20px; background-color: red; border-radius: 10px;" onclick="window.location.href = 'playit://playerv2/video?url={finalUrl}&amp;title={file_data.file_name}'">Playit player</button> &nbsp <br>
-        <p>&nbsp</p>
-        <button style="font-size: 20px; background-color: yellow; border-radius: 10px;" onclick="window.location.href = '{finalUrl}'">Save in your gallery</button> &nbsp
-    </center>
-			
-    function download() {
-        window.location.href = finalUrl;
+    function playOnlineVlc() {
+        const openVlc = `vlc://${finalUrl}`;
+        window.location.href = openVlc;
     }
 
     function openTgBot() {
