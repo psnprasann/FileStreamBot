@@ -133,14 +133,6 @@
             <button id="mx-btn" onclick="playOnlineMx()"><img src="https://i.ibb.co/djV3Fn8/mxlogo.png" alt="mx_logo" width="120px">
             </button>
         </div>
-        <div style="margin-bottom: 5px; margin-top: 5px">
-        <div id="button-container1">
-            <button id="sp-btn" onclick="playOnlinesp()">
-                <img src="https://i.ibb.co/vZxWgz5/ZKTgV9HV.png" alt="splayer_logo" width="130px">
-            </button>
-            <button id="pi-btn" onclick="playOnlinepi()"><img src="https://i.ibb.co/JsDNHgz/c0C4vnAa.png" alt="playit_logo" width="140px">
-            </button>
-        </div>
 	</div>
 	<div style="margin-bottom: 5px; margin-top: 10px"></div>
         <div id="button-container2">
@@ -162,13 +154,10 @@
               'progress', 
               'current-time',
               'duration',
-              'mute',
               'volume',
               'captions',
-              'settings',
               'pip',
               'airplay',
-              'download',
               'fullscreen'
             ];
 	</script>
@@ -187,18 +176,6 @@
         const finalLinkUrl = finalUrl;
         const openMx = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={file_data.file_name};end`;
         window.location.href = openMx;
-    }
-    
-    function playOnlinesp() {
-        const finalLinkUrl = finalUrl;
-        const spUrl = `intent:${finalLinkUrl}#Intent;action=com.young.simple.player.playback_online;package=com.young.simple.player;end`;
-        window.location.href = spUrl;
-    }
-    
-    function playOnlinepi() {
-        const finalLinkUrl = finalUrl;
-        const piUrl = `playit://playerv2/video?url=${finalLinkUrl}&amp;title={{file_name}}`;
-        window.location.href = piUrl;
     }
 			
     function download() {
