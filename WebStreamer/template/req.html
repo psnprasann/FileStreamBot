@@ -185,7 +185,7 @@
 
     function playOnlineMx() {
         const finalLinkUrl = finalUrl;
-        const openMx = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;end`;
+        const openMx = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={file_data.file_name};end`;
         window.location.href = openMx;
     }
     
