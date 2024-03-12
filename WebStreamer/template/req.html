@@ -154,7 +154,6 @@
               'progress', 
               'current-time',
               'duration',
-              'volume',
               'captions',
               'pip',
               'airplay',
@@ -167,20 +166,17 @@
     const finalUrl = currentUrl.replace("/watch/", "/dl/");
 
     function playOnlineVlc() {
-        const finalLinkUrl = finalUrl;
-        const openVlc = `vlc://${finalLinkUrl}`;
+        const openVlc = `vlc://${finalUrl}`;
         window.location.href = openVlc;
     }
 
     function playOnlineMx() {
-        const finalLinkUrl = finalUrl;
-        const openMx = `intent:${finalLinkUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={file_data.file_name};end`;
+        const openMx = `intent:${finalUrl}#Intent;package=com.mxtech.videoplayer.ad;S.title={file_data.file_name};end`;
         window.location.href = openMx;
     }
 			
     function download() {
-        const finalLinkUrl = finalUrl;
-        window.location.href = finalLinkUrl;
+        window.location.href = finalUrl;
     }
 
     function openTgBot() {
