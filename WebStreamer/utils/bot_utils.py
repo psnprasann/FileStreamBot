@@ -54,7 +54,7 @@ async def gen_link(m: Message, _id, name: list) -> tuple[InlineKeyboardMarkup, s
     Stream_Text=lang.STREAM_MSG_TEXT.format(file_name, file_size, page_link, name[0], name[1])
     reply_markup=InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton("🖥STREAM", url=page_link), InlineKeyboardButton("Dᴏᴡɴʟᴏᴀᴅ 📥", url=stream_link)]
+            [InlineKeyboardButton("🖥STREAM", url=page_link), InlineKeyboardButton("🖥STREAM", url=page_link)]
             ]
         )
 
